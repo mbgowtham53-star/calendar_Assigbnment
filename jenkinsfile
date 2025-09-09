@@ -24,7 +24,7 @@ pipeline {
             if [ -d "${REPO_DIR}" ]; then
                 cd ${REPO_DIR} && git pull
             else
-                git clone -b master https://github.com/anandg7259/Apache_Stratos_Tomcat_Applications-fork.git
+                git clone -b master https://github.com/mbgowtham53-star/calendar_Assigbnment.git
             fi
         """
     }
