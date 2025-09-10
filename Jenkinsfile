@@ -66,12 +66,9 @@ pipeline {
         sh 'curl -f -I http://${SERVER_IP_1}:8080/Calendar/ || exit 1'
 
      echo "Verifying Calendar application on Tomcat2..."
-        sh '''
-            # IGNORE the curl exit code completely
-            curl -I http://172.31.44.137:8080/Calendar/ || true
-            echo "Application verification completed"
-            exit 0  # Always succeed
-        '''
+            echo "Verifying Calendar application on Tomcat2..."
+        sh 'curl -f -I http://${SERVER_IP_2}:8080/Calendar/ || exit 1'
+
             }
         }
     }
