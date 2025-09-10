@@ -1,11 +1,6 @@
 pipeline {
     agent { label 'suprith2' }
 
-    tools {
-        jdk 'jdk17'
-        maven 'Maven3'
-    }
-
     environment {
         SERVER_IP_1 = "172.31.39.195"
         SERVER_IP_2 = "172.31.44.137"
