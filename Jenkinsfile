@@ -47,7 +47,7 @@ pipeline {
                 echo "Deploying WAR to Tomcat2..."
                 sh """
                 
-                    fi
+        
                     ssh ${USER_NAME}@${SERVER_IP_2} "mkdir -p ${TMP_DIR}"
                     scp $WAR_FILE ${USER_NAME}@${SERVER_IP_2}:${TMP_DIR}
                     ssh ${USER_NAME}@${SERVER_IP_2} "sudo mv ${TMP_DIR}/*.war ${TOMCAT_DIR}"
